@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Interior Designer</title>
+    <link rel="stylesheet" href="style.css?v=3">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Logo.ico">
+    <link rel="shortcut icon" href="Logo.ico">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="Logo.png" alt="Logo" class="site-logo dark-img">
+            <img src="light_logo.png" alt="Logo" class="site-logo light-img">
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">
+            <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <circle cx="12" cy="12" r="5" />
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+            <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+        </button>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li class="dropdown">
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <ul class="dropdown-menu">
+                    <li><a href="portfolio1.html">UEL Term-1 Work</a></li>
+                    <li><a href="portfolio2.html">UEL Term-2 Work</a></li>
+                    <li><a href="portfolio3.html">Interior Technical Drawings</a></li>
+                    <li><a href="portfolio4.html">Architecture</a></li>
+                    <li><a href="portfolio5.html">Co-working Space Design</a></li>
+                </ul>
+            </li>
+            <li><a href="#expertise" class="nav-link">Expertise</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <video autoplay loop muted playsinline>
+                <source src="cover.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-content">
+            <p class="hero-tagline">Interior Designer & Architect</p>
+            <h1 class="hero-name">
+                <span class="name-line">SANSKRUTI MOGALI</span>
+            </h1>
+            <p class="hero-description">Creating thoughtful spaces where form meets function, and every detail tells a
+                story of intentional design.</p>
+            <div class="hero-cta">
+                <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about fade-in">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About</span>
+                <h2 class="section-title">Professional Profile</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="Sanskruti.jpeg" alt="Sanskruti Mogali">
+                </div>
+                <div class="about-main">
+                    <p class="about-lead">I am an interior design professional with a passion for creating spaces that
+                        balance aesthetic beauty with practical functionality. Currently pursuing my Master's degree in
+                        Interior Design, I combine academic rigor with a keen eye for contemporary design trends.</p>
+                    <p>My approach centers on understanding how people interact with their environments. I believe that
+                        great design should not only look stunning but should enhance daily life-improving mood,
+                        productivity, and overall well-being.</p>
+                    <p>With a background in architecture and a specialization in interior design, I bring a unique
+                        perspective that bridges structural integrity with interior artistry. Each project is an
+                        opportunity to craft spaces that inspire and endure.</p>
+                </div>
+                <div class="about-sidebar">
+                    <div class="sidebar-card">
+                        <h4>Education</h4>
+                        <div class="education-item">
+                            <span class="degree">M.A. Interior Design</span>
+                            <span class="school">University of East London</span>
+                            <span class="year">2025 - Present</span>
+                        </div>
+                        <div class="education-item">
+                            <span class="degree">B.Arch.</span>
+                            <span class="school">Gogte Institute of Technology</span>
+                            <span class="year">2019 - 2024</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-card">
+                        <h4>Core Values</h4>
+                        <ul class="values-list">
+                            <li>Sustainable Design Practices</li>
+                            <li>Human-Centered Approach</li>
+                            <li>Attention to Detail</li>
+                            <li>Innovation & Creativity</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio fade-in">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Selected Projects</h2>
+            </div>
+
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="carousel-slide active" data-category="residential">
+                        <a href="portfolio1.html" class="project-card"
+                            style="text-decoration: none; color: inherit; display: block;">
+                            <div class="project-image p1">
+                                <div class="project-overlay">
+                                    <span class="view-project">View Project</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <span class="project-type">Academic Design</span>
+                                <h3>UEL Term-1 Work</h3>
+                                <div class="project-meta">
+                                    <span>2025</span>
+                                    <span>Interior Design</span>
+                                    <span>UK</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-slide" data-category="commercial">
+                        <a href="portfolio2.html" class="project-card"
+                            style="text-decoration: none; color: inherit; display: block;">
+                            <div class="project-image p2">
+                                <div class="project-overlay">
+                                    <span class="view-project">View Project</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <span class="project-type">Academic Design</span>
+                                <h3>UEL Term-2 Work (Live Project)</h3>
+                                <div class="project-meta">
+                                    <span>2026</span>
+                                    <span>Interior Design</span>
+                                    <span>UK</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-slide" data-category="hospitality">
+                        <a href="portfolio3.html" class="project-card"
+                            style="text-decoration: none; color: inherit; display: block;">
+                            <div class="project-image p3">
+                                <div class="project-overlay">
+                                    <span class="view-project">View Project</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <span class="project-type">Design Details</span>
+                                <h3>Interior Technical Drawings</h3>
+                                <div class="project-meta">
+                                    <span>2023</span>
+                                    <span>Architecture</span>
+                                    <span>India</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-slide" data-category="residential">
+                        <a href="portfolio4.html" class="project-card"
+                            style="text-decoration: none; color: inherit; display: block;">
+                            <div class="project-image p4">
+                                <div class="project-overlay">
+                                    <span class="view-project">View Project</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <span class="project-type">Architecture</span>
+                                <h3>Architecture</h3>
+                                <div class="project-meta">
+                                    <span>2023</span>
+                                    <span>Architecture</span>
+                                    <span>India</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-slide" data-category="commercial">
+                        <a href="portfolio5.html" class="project-card"
+                            style="text-decoration: none; color: inherit; display: block;">
+                            <div class="project-image p5">
+                                <div class="project-overlay">
+                                    <span class="view-project">View Project</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <span class="project-type">Academic Design</span>
+                                <h3>Project Co-working Space Design</h3>
+                                <div class="project-meta">
+                                    <span>2022-2024</span>
+                                    <span>Architecture</span>
+                                    <span>India</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-nav">
+                    <button class="carousel-btn prev" aria-label="Previous">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <div class="carousel-dots"></div>
+                    <button class="carousel-btn next" aria-label="Next">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="carousel-counter">
+                    <span class="current">01</span>
+                    <span class="separator">/</span>
+                    <span class="total">05</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise" class="expertise fade-in">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Expertise</span>
+                <h2 class="section-title">Skills & Capabilities</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Design Software</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>AutoCAD</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--progress: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>SketchUp</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--progress: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Adobe Photoshop</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--progress: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Adobe Illustrator</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--progress: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>3ds Max / V-Ray</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--progress: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Design Capabilities</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Space Planning</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--progress: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Material Selection</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--progress: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Lighting Design</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--progress: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Furniture Design</span>
+                            <span>82%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--progress: 82%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Sustainable Design</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--progress: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Professional Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Project Management</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--progress: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Client Communication</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--progress: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Budget Planning</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--progress: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Vendor Relations</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--progress: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Presentation Skills</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--progress: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="certifications">
+                <h3>Certifications & Memberships</h3>
+                <div class="cert-grid">
+                    <div class="cert-item">
+                        <span class="cert-icon">◆</span>
+                        <span>Revit License Certificate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact fade-in">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag">Contact</span>
+                    <h2 class="section-title">Let's Work Together</h2>
+                    <p>I am actively seeking full-time opportunities and welcome the chance to connect with prospective
+                        employers and industry professionals.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            <a href="mailto:sanskrutimogali@gmail.com">sanskrutimogali@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span>London, UK</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/sanskruti-mogali/" class="social-link"
+                            target="_blank">LinkedIn</a>
+                        <a href="https://www.instagram.com/sanskruti_mogali?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            class="social-link" target="_blank">Instagram</a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                            <span class="form-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Email Address</label>
+                            <span class="form-line"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select id="subject" name="subject" required>
+                            <option value="" disabled selected></option>
+                            <option value="residential">Residential Project</option>
+                            <option value="commercial">Commercial Project</option>
+                            <option value="collaboration">Collaboration Opportunity</option>
+                            <option value="career">Career Inquiry</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label for="subject">Project Type</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                        <label for="message">Your Message</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span>Send Message</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13" />
+                            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="Logo.png" alt="Logo" class="site-logo dark-img">
+                    <img src="light_logo.png" alt="Logo" class="site-logo light-img">
+                </div>
+                <p class="footer-tagline">Designing spaces that inspire.</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <p class="copyright">© 2026 Sanskruti Karibasappa Mogali. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.querySelector('.navbar');
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const themeToggle = document.querySelector('.theme-toggle');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const carouselTrack = document.querySelector('.carousel-track');
+            const slides = document.querySelectorAll('.carousel-slide');
+            const prevBtn = document.querySelector('.carousel-btn.prev');
+            const nextBtn = document.querySelector('.carousel-btn.next');
+            const dotsContainer = document.querySelector('.carousel-dots');
+            const currentCounter = document.querySelector('.carousel-counter .current');
+            const totalCounter = document.querySelector('.carousel-counter .total');
+            let currentSlide = 0;
+            let autoplayInterval;
+
+            themeToggle.addEventListener('click', () => {
+                const current = document.documentElement.getAttribute('data-theme');
+                const next = current === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+            });
+
+            let lastScroll = 0;
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.scrollY;
+                navbar.classList.toggle('scrolled', currentScroll > 80);
+                lastScroll = currentScroll;
+            });
+
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            let activeSlides = Array.from(slides);
+
+            function updateCarousel() {
+                carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+                const dots = dotsContainer.querySelectorAll('.dot');
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+                currentCounter.textContent = String(activeSlides.length ? currentSlide + 1 : 0).padStart(2, '0');
+            }
+
+            function goToSlide(index) {
+                if (!activeSlides.length) return;
+                currentSlide = index;
+                if (currentSlide >= activeSlides.length) currentSlide = 0;
+                if (currentSlide < 0) currentSlide = activeSlides.length - 1;
+                updateCarousel();
+                resetAutoplay();
+            }
+
+            function nextSlide() { goToSlide(currentSlide + 1); }
+            function prevSlide() { goToSlide(currentSlide - 1); }
+
+            function startAutoplay() {
+                autoplayInterval = setInterval(nextSlide, 5000);
+            }
+            function resetAutoplay() {
+                clearInterval(autoplayInterval);
+                startAutoplay();
+            }
+
+            prevBtn.addEventListener('click', prevSlide);
+            nextBtn.addEventListener('click', nextSlide);
+
+            function applyFilter(filter) {
+                activeSlides = [];
+                slides.forEach(slide => {
+                    const category = slide.dataset.category;
+                    if (filter === 'all' || category === filter) {
+                        slide.style.display = 'block';
+                        activeSlides.push(slide);
+                    } else {
+                        slide.style.display = 'none';
+                    }
+                });
+
+                currentSlide = 0;
+
+                dotsContainer.innerHTML = '';
+                activeSlides.forEach((_, index) => {
+                    const dot = document.createElement('button');
+                    dot.classList.add('dot');
+                    dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+                    if (index === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => goToSlide(index));
+                    dotsContainer.appendChild(dot);
+                });
+
+                totalCounter.textContent = String(activeSlides.length).padStart(2, '0');
+                updateCarousel();
+                resetAutoplay();
+            }
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filter = btn.dataset.filter;
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    applyFilter(filter);
+                });
+            });
+
+            // Initialize carousel
+            applyFilter('all');
+
+            const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
+            const fadeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        if (entry.target.classList.contains('skill-fill')) {
+                            entry.target.style.width = entry.target.style.getPropertyValue('--progress');
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+            document.querySelectorAll('.skill-fill').forEach(el => fadeObserver.observe(el));
+
+            const contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const btn = contactForm.querySelector('.btn-submit');
+                btn.classList.add('success');
+                btn.innerHTML = '<span>Message Sent!</span>';
+                setTimeout(() => {
+                    btn.classList.remove('success');
+                    btn.innerHTML = `<span>Send Message</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"/>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                        </svg>`;
+                    contactForm.reset();
+                }, 3000);
+            });
+
+            document.querySelectorAll('.form-group input, .form-group textarea, .form-group select').forEach(input => {
+                const handleFocus = () => input.parentElement.classList.toggle('focus', true);
+                const handleBlur = () => {
+                    if (!input.value) input.parentElement.classList.remove('focus');
+                };
+                input.addEventListener('focus', handleFocus);
+                input.addEventListener('blur', handleBlur);
+            });
+        });
+    </script>
+</body>
+
+</html>
