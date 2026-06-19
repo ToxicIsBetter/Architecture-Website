@@ -1220,6 +1220,54 @@ a {
     }
 }
 
+.awards {
+    padding: 6rem 0;
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.award-card {
+    background: var(--dark-secondary);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.award-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.award-title {
+    color: var(--accent);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.award-meta {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.award-desc {
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+[data-theme="light"] .award-card {
+    background: var(--bg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
 @media (max-width: 600px) {
     .hero-name {
         font-size: clamp(1.8rem, 8vw, 2.5rem);
