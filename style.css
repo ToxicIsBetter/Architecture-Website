@@ -293,24 +293,27 @@ a {
 }
 
 .hero-video-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
 }
+
 .hero-video-container iframe {
-  width: 100vw;
-  height: 56.25vw; /* 16:9 aspect ratio */
-  min-height: 100vh;
-  min-width: 177.77vh; 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none; /* Prevents user interaction */
+    width: 100vw;
+    height: 56.25vw;
+    /* 16:9 aspect ratio */
+    min-height: 100vh;
+    min-width: 177.77vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    /* Prevents user interaction */
 }
 
 .hero-bg::before {
@@ -717,35 +720,35 @@ a {
 }
 
 .p1 {
-    background: url("UEL Term-1 Work/cover.png");
+    background: url("https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781913021/cover_yktk8j.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .p2 {
-    background: url("UEL Term-2 Work/cover.png");
+    background: url("https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912390/cover_vetv06.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .p3 {
-    background: url("Interior Technical Drawings/cover.png");
+    background: url("https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912931/cover_x92ynd.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .p4 {
-    background: url("Architectural Drawings/cover.png");
+    background: url("https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781913238/cover_vp5ig8.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .p5 {
-    background: url("Design/cover.png");
+    background: url("https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912861/cover_u9q0nj.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
