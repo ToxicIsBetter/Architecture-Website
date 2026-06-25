@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- White Background -->
+  <rect width="256" height="256" fill="white"/>
+  
+  <!-- SM Initials in Black, All Caps -->
+  <text 
+    x="128" 
+    y="178" 
+    font-family="'Montserrat', sans-serif" 
+    font-size="140" 
+    font-weight="700" 
+    text-anchor="middle" 
+    fill="black" 
+    letter-spacing="2">SM</text>
+</svg>
