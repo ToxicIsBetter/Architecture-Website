@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>Portfolio | Interior Designer</title>
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=18">
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
@@ -44,15 +44,21 @@
         <ul class="nav-links">
             <li><a href="#home" class="nav-link">Home</a></li>
             <li><a href="#about" class="nav-link">About</a></li>
-            <li class="dropdown">
+            <li class="dropdown mega-dropdown">
                 <a href="#portfolio" class="nav-link">Portfolio</a>
-                <ul class="dropdown-menu">
-                    <li><a href="portfolio1.html">UEL Term-1 Work</a></li>
-                    <li><a href="portfolio2.html">UEL Term-2 Work</a></li>
-                    <li><a href="portfolio3.html">Interior Technical Drawings</a></li>
-                    <li><a href="portfolio4.html">Architecture</a></li>
-                    <li><a href="portfolio5.html">Co-working Space Design</a></li>
-                </ul>
+                <div class="mega-menu">
+                    <div class="mega-column">
+                        <a href="index.html#academic-category" class="mega-header">Academic Design</a>
+                        <a href="portfolio1.html" class="mega-link">Dialogues In theatre</a>
+                        <a href="portfolio2.html" class="mega-link">UEL Term-2 Work</a>
+                        <a href="portfolio5.html" class="mega-link">Co-working Space Design</a>
+                    </div>
+                    <div class="mega-column">
+                        <a href="index.html#professional-category" class="mega-header">Professional Projects</a>
+                        <a href="portfolio3.html" class="mega-link">Interior Technical</a>
+                        <a href="portfolio4.html" class="mega-link">Architecture Showcase</a>
+                    </div>
+                </div>
             </li>
             <li><a href="#expertise" class="nav-link">Expertise</a></li>
             <li><a href="#awards" class="nav-link">Awards</a></li>
@@ -77,8 +83,8 @@
             <p class="hero-description">Creating thoughtful spaces where form meets function, and every detail tells a
                 story of intentional design.</p>
             <div class="hero-cta">
-                <a href="#portfolio" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                <a href="#academic-category" class="btn btn-primary">Academic Design</a>
+                <a href="#professional-category" class="btn btn-secondary">Professional Projects</a>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -88,7 +94,7 @@
         </div>
     </section>
 
-    <section id="about" class="about fade-in">
+    <section id="about" class="about">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">About</span>
@@ -137,137 +143,147 @@
             </div>
         </div>
     </section>
-
-    <section id="portfolio" class="portfolio fade-in">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Portfolio</span>
-                <h2 class="section-title">Selected Projects</h2>
+    <section id="portfolio" class="portfolio">
+        <!-- CATEGORY DIVIDER: ACADEMIC -->
+        <div id="academic-category" class="category-divider category-academic">
+            <div class="container divider-container">
+                <span class="divider-line"></span>
+                <h2 class="divider-title">Academic Design</h2>
+                <span class="divider-line"></span>
             </div>
+        </div>
 
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    <div class="carousel-slide active" data-category="residential">
-                        <a href="portfolio1.html" class="project-card"
-                            style="text-decoration: none; color: inherit; display: block;">
-                            <div class="project-image p1">
-                                <div class="project-overlay">
-                                    <span class="view-project">View Project</span>
-                                </div>
-                            </div>
-                            <div class="project-content">
-                                <span class="project-type">Academic Design</span>
-                                <h3>UEL Term-1 Work</h3>
-                                <div class="project-meta">
-                                    <span>2025</span>
-                                    <span>Interior Design</span>
-                                    <span>UK</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="carousel-slide" data-category="commercial">
-                        <a href="portfolio2.html" class="project-card"
-                            style="text-decoration: none; color: inherit; display: block;">
-                            <div class="project-image p2">
-                                <div class="project-overlay">
-                                    <span class="view-project">View Project</span>
-                                </div>
-                            </div>
-                            <div class="project-content">
-                                <span class="project-type">Academic Design</span>
-                                <h3>UEL Term-2 Work (Live Project)</h3>
-                                <div class="project-meta">
-                                    <span>2026</span>
-                                    <span>Interior Design</span>
-                                    <span>UK</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="carousel-slide" data-category="hospitality">
-                        <a href="portfolio3.html" class="project-card"
-                            style="text-decoration: none; color: inherit; display: block;">
-                            <div class="project-image p3">
-                                <div class="project-overlay">
-                                    <span class="view-project">View Project</span>
-                                </div>
-                            </div>
-                            <div class="project-content">
-                                <span class="project-type">Design Details</span>
-                                <h3>Interior Technical Drawings</h3>
-                                <div class="project-meta">
-                                    <span>2023</span>
-                                    <span>Architecture</span>
-                                    <span>India</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="carousel-slide" data-category="residential">
-                        <a href="portfolio4.html" class="project-card"
-                            style="text-decoration: none; color: inherit; display: block;">
-                            <div class="project-image p4">
-                                <div class="project-overlay">
-                                    <span class="view-project">View Project</span>
-                                </div>
-                            </div>
-                            <div class="project-content">
-                                <span class="project-type">Architecture</span>
-                                <h3>Architecture</h3>
-                                <div class="project-meta">
-                                    <span>2023</span>
-                                    <span>Architecture</span>
-                                    <span>India</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="carousel-slide" data-category="commercial">
-                        <a href="portfolio5.html" class="project-card"
-                            style="text-decoration: none; color: inherit; display: block;">
-                            <div class="project-image p5">
-                                <div class="project-overlay">
-                                    <span class="view-project">View Project</span>
-                                </div>
-                            </div>
-                            <div class="project-content">
-                                <span class="project-type">Academic Design</span>
-                                <h3>Project Co-working Space Design</h3>
-                                <div class="project-meta">
-                                    <span>2022-2024</span>
-                                    <span>Architecture</span>
-                                    <span>India</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+    <!-- PROJECT 1: UEL TERM-1 -->
+    <section id="project-theatre" class="project-section theatre-theme fade-in">
+        <div class="theatre-container">
+            <div class="theatre-content">
+                <span class="project-tag">Academic Design</span>
+                <h2 class="project-title">Dialogues In theatre</h2>
+                <div class="project-meta">
+                    <span>2025</span> • <span>Interior Design</span> • <span>UK</span>
                 </div>
-                <div class="carousel-nav">
-                    <button class="carousel-btn prev" aria-label="Previous">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M15 18l-6-6 6-6" />
-                        </svg>
-                    </button>
-                    <div class="carousel-dots"></div>
-                    <button class="carousel-btn next" aria-label="Next">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M9 18l6-6-6-6" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="carousel-counter">
-                    <span class="current">01</span>
-                    <span class="separator">/</span>
-                    <span class="total">05</span>
-                </div>
+                <p class="project-desc">Based around the theme of a theatre where two people are in a dialogue—independent from the world. There are certain rules to be followed. It shows balance where this object works only if two people use it; it will fail if used by only one person, exploring principles of power dynamics.</p>
+                <a href="portfolio1.html" class="btn btn-primary">Explore Project</a>
+            </div>
+            <div class="theatre-visual">
+                <div class="theatre-image p1-image"></div>
             </div>
         </div>
     </section>
 
-    <section id="expertise" class="expertise fade-in">
+    <!-- PROJECT 2: UEL TERM-2 -->
+    <section id="project-tate" class="project-section tate-theme fade-in">
+        <div class="tate-container">
+            <div class="tate-visual">
+                <div class="tate-image p2-image"></div>
+            </div>
+            <div class="tate-content">
+                <span class="project-tag">Academic Design</span>
+                <h2 class="project-title">UEL Term-2 Work</h2>
+                <div class="project-meta">
+                    <span>2026</span> • <span>Interior Design</span> • <span>UK</span>
+                </div>
+                <p class="project-desc">A live project of Tate Institute redesigned as a community hub with co-working spaces. Furniture was designed to be used in 5 ways, emphasizing flexibility and making things work even when restrained in small, compact spaces and lacking time.</p>
+                <a href="portfolio2.html" class="btn btn-primary">Explore Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT 3: CO-WORKING SPACE -->
+    <section id="project-coworking" class="project-section coworking-theme fade-in">
+        <div class="coworking-container">
+            <div class="coworking-content">
+                <span class="project-tag">Academic Design</span>
+                <h2 class="project-title">Co-Working Space Design</h2>
+                <div class="project-meta">
+                    <span>2022-2024</span> • <span>Architecture</span> • <span>India</span>
+                </div>
+                <p class="project-desc">A complex structure where every floor rotates at a 22-degree angle for climatic response. Focused on sustainability, it features a greenhouse and furniture designed around body posture and anthropometry for ultimate comfort.</p>
+                <a href="portfolio5.html" class="btn btn-primary">Explore Project</a>
+            </div>
+            <div class="coworking-visual-wrapper">
+                <!-- Rotated visual element representing the 22 degree floor rotation -->
+                <div class="coworking-visual rotated-22 p5-image"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORY DIVIDER: PROFESSIONAL -->
+    <div id="professional-category" class="category-divider category-professional">
+        <div class="container divider-container">
+            <span class="divider-line"></span>
+            <h2 class="divider-title">Professional Projects</h2>
+            <span class="divider-line"></span>
+        </div>
+    </div>
+
+    <!-- PROJECT 4: INTERIOR TECHNICAL -->
+    <section id="project-technical" class="project-section technical-theme fade-in">
+        <div class="technical-container">
+            <div class="technical-header">
+                <span class="project-tag">Design Details</span>
+                <h2 class="project-title">Interior Technical</h2>
+                <div class="project-meta">
+                    <span>2023</span> • <span>Architecture</span> • <span>India</span>
+                </div>
+                <p class="project-desc">Interior detailed drawings including electrical drawings, site plans, and technical drafting. Showcasing precision and structural understanding.</p>
+                <a href="portfolio3.html" class="btn btn-primary">Explore Drawings</a>
+            </div>
+            <div class="technical-blueprint p3-image">
+                <!-- Grid overlay for blueprint effect -->
+                <div class="blueprint-grid"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT 5: ARCHITECTURE GALLERY -->
+    <section id="project-architecture" class="project-section architecture-theme fade-in">
+        <div class="architecture-header">
+            <span class="project-tag">Architecture</span>
+            <h2 class="project-title">Architecture Showcase</h2>
+            <p class="project-desc">A collection of distinct architectural projects ranging from residential design to facade options.</p>
+        </div>
+        <div class="architecture-masonry">
+            <a href="portfolio4.html" class="arch-card">
+                <div class="arch-img p4-1-image"></div>
+                <div class="arch-info">
+                    <h3>GR FLORET, BEGUR</h3>
+                    <p>2 and 3 BHK Premium Apartments.</p>
+                </div>
+            </a>
+            <a href="portfolio4.html" class="arch-card">
+                <div class="arch-img p4-2-image"></div>
+                <div class="arch-info">
+                    <h3>Weekend House</h3>
+                    <p>Designed and executed for a client.</p>
+                </div>
+            </a>
+            <a href="portfolio4.html" class="arch-card">
+                <div class="arch-img p4-3-image"></div>
+                <div class="arch-info">
+                    <h3>Electrical Plans</h3>
+                    <p>Residential Building Electrical Layouts.</p>
+                </div>
+            </a>
+            <a href="portfolio4.html" class="arch-card">
+                <div class="arch-img p4-4-image"></div>
+                <div class="arch-info">
+                    <h3>KNS Infrastructure</h3>
+                    <p>Facade Options in Bengaluru.</p>
+                </div>
+            </a>
+            <a href="portfolio4.html" class="arch-card">
+                <div class="arch-img p4-5-image"></div>
+                <div class="arch-info">
+                    <h3>5 BHK Residential Plan</h3>
+                    <p>Comprehensive layout design.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    </section>
+
+    <section id="expertise" class="expertise">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Expertise</span>
@@ -431,7 +447,7 @@
         </div>
     </section>
 
-    <section id="awards" class="awards fade-in">
+    <section id="awards" class="awards">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Recognition</span>
@@ -477,7 +493,7 @@
         </div>
     </section>
 
-    <section id="contact" class="contact fade-in">
+    <section id="contact" class="contact">
         <div class="container">
             <div class="contact-wrapper">
                 <div class="contact-info">
@@ -617,80 +633,6 @@
                 });
             });
 
-            let activeSlides = Array.from(slides);
-
-            function updateCarousel() {
-                carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-                const dots = dotsContainer.querySelectorAll('.dot');
-                dots.forEach((dot, index) => {
-                    dot.classList.toggle('active', index === currentSlide);
-                });
-                currentCounter.textContent = String(activeSlides.length ? currentSlide + 1 : 0).padStart(2, '0');
-            }
-
-            function goToSlide(index) {
-                if (!activeSlides.length) return;
-                currentSlide = index;
-                if (currentSlide >= activeSlides.length) currentSlide = 0;
-                if (currentSlide < 0) currentSlide = activeSlides.length - 1;
-                updateCarousel();
-                resetAutoplay();
-            }
-
-            function nextSlide() { goToSlide(currentSlide + 1); }
-            function prevSlide() { goToSlide(currentSlide - 1); }
-
-            function startAutoplay() {
-                autoplayInterval = setInterval(nextSlide, 5000);
-            }
-            function resetAutoplay() {
-                clearInterval(autoplayInterval);
-                startAutoplay();
-            }
-
-            prevBtn.addEventListener('click', prevSlide);
-            nextBtn.addEventListener('click', nextSlide);
-
-            function applyFilter(filter) {
-                activeSlides = [];
-                slides.forEach(slide => {
-                    const category = slide.dataset.category;
-                    if (filter === 'all' || category === filter) {
-                        slide.style.display = 'block';
-                        activeSlides.push(slide);
-                    } else {
-                        slide.style.display = 'none';
-                    }
-                });
-
-                currentSlide = 0;
-
-                dotsContainer.innerHTML = '';
-                activeSlides.forEach((_, index) => {
-                    const dot = document.createElement('button');
-                    dot.classList.add('dot');
-                    dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
-                    if (index === 0) dot.classList.add('active');
-                    dot.addEventListener('click', () => goToSlide(index));
-                    dotsContainer.appendChild(dot);
-                });
-
-                totalCounter.textContent = String(activeSlides.length).padStart(2, '0');
-                updateCarousel();
-                resetAutoplay();
-            }
-
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const filter = btn.dataset.filter;
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    applyFilter(filter);
-                });
-            });
-
-            // Initialize carousel
-            applyFilter('all');
 
             const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
             const fadeObserver = new IntersectionObserver((entries) => {
@@ -734,6 +676,9 @@
             });
         });
     </script>
+
+    </script>
 </body>
+
 
 </html>
