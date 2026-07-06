@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture | Portfolio</title>
+    <link rel="stylesheet" href="style.css?v=18">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .project-detail {
+            padding-top: 100px;
+            padding-bottom: 50px;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .gallery-image {
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .project-header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+
+        .navbar {
+            background: rgba(13, 13, 13, 0.92) !important;
+            backdrop-filter: blur(20px) !important;
+            padding: 1rem 5% !important;
+            box-shadow: 0 1px 0 var(--border) !important;
+        }
+
+        [data-theme="light"] .navbar {
+            background: rgba(255, 255, 255, 0.92) !important;
+        }
+
+        .project-cover {
+            position: relative;
+            width: 100%;
+            height: 85vh;
+            overflow: hidden;
+            background-color: var(--primary);
+        }
+
+        .project-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .project-cover-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .project-cover h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5rem;
+            color: #ffffff;
+            margin: 0;
+            text-align: center;
+            text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+            padding: 0 20px;
+        }
+
+        .arch-project {
+            margin-bottom: 80px;
+            text-align: center;
+        }
+
+        .arch-project-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 30px;
+        }
+
+        .arch-divider {
+            border: 0;
+            height: 1px;
+            background: rgba(191, 161, 117, 0.3);
+            margin: 60px auto;
+            width: 50%;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <span class="site-logo-text" style="font-size: 1.8rem; font-weight: 700; letter-spacing: 1px; color: var(--text);">SM</span>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">
+            <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <circle cx="12" cy="12" r="5" />
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+            <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+        </button>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#home" class="nav-link">Home</a></li>
+            <li><a href="index.html#about" class="nav-link">About</a></li>
+            <li class="dropdown mega-dropdown">
+                <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+                <div class="mega-menu">
+                                        <div class="mega-column">
+                        <a href="index.html#professional-category" class="mega-header">Professional Projects</a>
+                        <a href="gr-floret.html" class="mega-link">GR FLORET, BEGUR</a>
+                        <a href="weekend-house.html" class="mega-link">Weekend House</a>
+                        <a href="kns-infrastructure.html" class="mega-link">KNS Infrastructure</a>
+                        <a href="5bhk-residential.html" class="mega-link">5 BHK Residential Plan</a>
+                    </div>
+                    <div class="mega-column">
+                        <a href="index.html#technical-category" class="mega-header">Technical Designs</a>
+                        <a href="electrical-plans.html" class="mega-link">Electrical Plans</a>
+                        <a href="interior-technical.html" class="mega-link">Interior Technical</a>
+                    </div>
+                    <div class="mega-column">
+                        <a href="index.html#academic-category" class="mega-header">Academic Designs</a>
+                        <a href="dialogues-in-theatre.html" class="mega-link">Dialogues In theatre</a>
+                        <a href="uel-term-2-work.html" class="mega-link">UEL Term-2 Work</a>
+                        <a href="coworking-space-design.html" class="mega-link">Co-working Space Design</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="index.html#expertise" class="nav-link">Expertise</a></li>
+            <li><a href="index.html#awards" class="nav-link">Awards</a></li>
+            <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="project-cover">
+        <img src="https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912390/cover_vetv06.png"
+            alt="Cover Image" loading="lazy">
+        <div class="project-cover-overlay">
+            <h1>Architecture</h1>
+        </div>
+    </div>
+    <section class="project-detail" style="padding-top: 40px;">
+        
+        <!-- PROJECT 1: GR FLORET, BEGUR -->
+        <div class="arch-project" id="project-1">
+            <h2 class="arch-project-title">GR FLORET, BEGUR</h2>
+            <div class="gallery-container">
+                <img src="https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912391/Untitled_design_27_of_62_xxksom.png" class="gallery-image" loading="lazy" alt="Project slide">
+                <img src="https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912392/Untitled_design_28_of_62_yu3lwy.png" class="gallery-image" loading="lazy" alt="Project slide">
+                <img src="https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912392/Untitled_design_29_of_62_te2bjj.png" class="gallery-image" loading="lazy" alt="Project slide">
+                <img src="https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912396/Untitled_design_30_of_62_o0k8rz.png" class="gallery-image" loading="lazy" alt="Project slide">
+            </div>
+        </div>
+
+        <hr class="arch-divider">
+
+        <!-- PROJECT 2: Weekend House -->
+        <div class="arch-project" id="project-2">
+            <h2 class="arch-project-title">Weekend House</h2>
+            <div class="gallery-container">
+                <img src="https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912393/Untitled_design_31_of_62_jot69s.png" class="gallery-image" loading="lazy" alt="Project slide">
+                <img src="https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912394/Untitled_design_32_of_62_gggq2h.png" class="gallery-image" loading="lazy" alt="Project slide">
+                <img src="https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912396/Untitled_design_33_of_62_srqlr4.png" class="gallery-image" loading="lazy" alt="Project slide">
+                <img src="https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912396/Untitled_design_34_of_62_mjugnk.png" class="gallery-image" loading="lazy" alt="Project slide">
+            </div>
+        </div>
+
+        <hr class="arch-divider">
+
+        <!-- PROJECT 3: Electrical Plans -->
+        <div class="arch-project" id="project-3">
+            <h2 class="arch-project-title">Electrical Plans</h2>
+            <div class="gallery-container">
+                <img src="https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912396/Untitled_design_35_of_62_vmdzue.png" class="gallery-image" loading="lazy" alt="Project slide">
+                <img src="https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912396/Untitled_design_36_of_62_zoyn2j.png" class="gallery-image" loading="lazy" alt="Project slide">
+                <img src="https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912397/Untitled_design_37_of_62_zl5f0p.png" class="gallery-image" loading="lazy" alt="Project slide">
+                <img src="https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912398/Untitled_design_39_of_62_jmrhkq.png" class="gallery-image" loading="lazy" alt="Project slide">
+            </div>
+        </div>
+
+        <hr class="arch-divider">
+
+        <!-- PROJECT 4: KNS Infrastructure -->
+        <div class="arch-project" id="project-4">
+            <h2 class="arch-project-title">KNS Infrastructure</h2>
+            <div class="gallery-container">
+                <img src="https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912399/Untitled_design_40_of_62_icepwu.png" class="gallery-image" loading="lazy" alt="Project slide">
+                <img src="https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912400/Untitled_design_41_of_62_klpvnm.png" class="gallery-image" loading="lazy" alt="Project slide">
+                <img src="https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912401/Untitled_design_42_of_62_fzfira.png" class="gallery-image" loading="lazy" alt="Project slide">
+                <img src="https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912402/Untitled_design_43_of_62_hi4i4n.png" class="gallery-image" loading="lazy" alt="Project slide">
+            </div>
+        </div>
+
+        <hr class="arch-divider">
+
+        <!-- PROJECT 5: 5 BHK Residential Plan -->
+        <div class="arch-project" id="project-5">
+            <h2 class="arch-project-title">5 BHK Residential Plan</h2>
+            <div class="gallery-container">
+                <img src="https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912402/Untitled_design_44_of_62_he6y5y.png" class="gallery-image" loading="lazy" alt="Project slide">
+                <img src="https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912403/Untitled_design_46_of_62_i0ijyw.png" class="gallery-image" loading="lazy" alt="Project slide">
+                <img src="https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912403/Untitled_design_47_of_62_ul21gh.png" class="gallery-image" loading="lazy" alt="Project slide">
+                <img src="https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912404/Untitled_design_48_of_62_g0ygbf.png" class="gallery-image" loading="lazy" alt="Project slide">
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+            <span class="site-logo-text" style="font-size: 1.8rem; font-weight: 700; letter-spacing: 1px; color: var(--text);">SM</span>
+        </div>
+                <p class="footer-tagline">Designing spaces that inspire.</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <p class="copyright">© 2026 Sanskruti Karibasappa Mogali. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.querySelector('.navbar');
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const themeToggle = document.querySelector('.theme-toggle');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const carouselTrack = document.querySelector('.carousel-track');
+            const slides = document.querySelectorAll('.carousel-slide');
+            const prevBtn = document.querySelector('.carousel-btn.prev');
+            const nextBtn = document.querySelector('.carousel-btn.next');
+            const dotsContainer = document.querySelector('.carousel-dots');
+            const currentCounter = document.querySelector('.carousel-counter .current');
+            const totalCounter = document.querySelector('.carousel-counter .total');
+            let currentSlide = 0;
+            let autoplayInterval;
+
+            themeToggle.addEventListener('click', () => {
+                const current = document.documentElement.getAttribute('data-theme');
+                const next = current === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+            });
+
+            let lastScroll = 0;
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.scrollY;
+                navbar.classList.toggle('scrolled', currentScroll > 80);
+                lastScroll = currentScroll;
+            });
+
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            let activeSlides = Array.from(slides);
+
+            function updateCarousel() {
+                carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+                const dots = dotsContainer.querySelectorAll('.dot');
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+                currentCounter.textContent = String(activeSlides.length ? currentSlide + 1 : 0).padStart(2, '0');
+            }
+
+            function goToSlide(index) {
+                if (!activeSlides.length) return;
+                currentSlide = index;
+                if (currentSlide >= activeSlides.length) currentSlide = 0;
+                if (currentSlide < 0) currentSlide = activeSlides.length - 1;
+                updateCarousel();
+                resetAutoplay();
+            }
+
+            function nextSlide() { goToSlide(currentSlide + 1); }
+            function prevSlide() { goToSlide(currentSlide - 1); }
+
+            function startAutoplay() {
+                autoplayInterval = setInterval(nextSlide, 5000);
+            }
+            function resetAutoplay() {
+                clearInterval(autoplayInterval);
+                startAutoplay();
+            }
+
+            prevBtn.addEventListener('click', prevSlide);
+            nextBtn.addEventListener('click', nextSlide);
+
+            function applyFilter(filter) {
+                activeSlides = [];
+                slides.forEach(slide => {
+                    const category = slide.dataset.category;
+                    if (filter === 'all' || category === filter) {
+                        slide.style.display = 'block';
+                        activeSlides.push(slide);
+                    } else {
+                        slide.style.display = 'none';
+                    }
+                });
+
+                currentSlide = 0;
+
+                dotsContainer.innerHTML = '';
+                activeSlides.forEach((_, index) => {
+                    const dot = document.createElement('button');
+                    dot.classList.add('dot');
+                    dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+                    if (index === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => goToSlide(index));
+                    dotsContainer.appendChild(dot);
+                });
+
+                totalCounter.textContent = String(activeSlides.length).padStart(2, '0');
+                updateCarousel();
+                resetAutoplay();
+            }
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filter = btn.dataset.filter;
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    applyFilter(filter);
+                });
+            });
+
+            // Initialize carousel
+            applyFilter('all');
+
+            const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
+            const fadeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        if (entry.target.classList.contains('skill-fill')) {
+                            entry.target.style.width = entry.target.style.getPropertyValue('--progress');
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+            document.querySelectorAll('.skill-fill').forEach(el => fadeObserver.observe(el));
+
+            const contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const btn = contactForm.querySelector('.btn-submit');
+                btn.classList.add('success');
+                btn.innerHTML = '<span>Message Sent!</span>';
+                setTimeout(() => {
+                    btn.classList.remove('success');
+                    btn.innerHTML = `<span>Send Message</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"/>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                        </svg>`;
+                    contactForm.reset();
+                }, 3000);
+            });
+
+            document.querySelectorAll('.form-group input, .form-group textarea, .form-group select').forEach(input => {
+                const handleFocus = () => input.parentElement.classList.toggle('focus', true);
+                const handleBlur = () => {
+                    if (!input.value) input.parentElement.classList.remove('focus');
+                };
+                input.addEventListener('focus', handleFocus);
+                input.addEventListener('blur', handleBlur);
+            });
+        });
+    </script>
+</body>
+
+</html>

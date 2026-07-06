@@ -507,8 +507,8 @@ a {
 
 .section-tag {
     display: inline-block;
-    font-size: 0.65rem;
-    letter-spacing: 4px;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--accent);
     margin-bottom: 1rem;
@@ -632,8 +632,7 @@ a {
 }
 
 .portfolio {
-    padding: 8rem 0;
-    background: var(--dark);
+    padding: 0;
 }
 
 .portfolio-filters {
@@ -882,6 +881,11 @@ a {
     background: var(--dark-secondary);
 }
 
+.expertise {
+    padding: 8rem 0;
+    background: var(--dark-secondary);
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -890,7 +894,7 @@ a {
 }
 
 .skill-category h3 {
-    font-size: 0.7rem;
+    font-size: 0.85rem;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--accent);
@@ -898,52 +902,48 @@ a {
     font-weight: 500;
 }
 
-.skill-item {
-    margin-bottom: 1.2rem;
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.skill-header {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.85rem;
-    margin-bottom: 0.5rem;
-}
-
-.skill-header span:first-child {
+.skill-list li {
+    font-size: 1.15rem;
     color: var(--text);
+    margin-bottom: 1.2rem;
+    position: relative;
+    padding-left: 1.8rem;
+    letter-spacing: 0.5px;
+    font-weight: 300;
 }
 
-.skill-header span:last-child {
-    color: var(--text-muted);
-}
-
-.skill-bar {
-    height: 2px;
-    background: var(--border);
-    border-radius: 1px;
-    overflow: hidden;
-}
-
-.skill-fill {
-    height: 100%;
-    background: var(--accent);
-    width: 0;
-    transition: width 1.2s ease-out;
-    border-radius: 1px;
+.skill-list li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent);
+    font-size: 0.8rem;
 }
 
 .certifications {
-    border-top: 1px solid var(--border);
-    padding-top: 3rem;
+    border-top: 1px solid rgba(191, 161, 117, 0.2);
+    padding-top: 4rem;
+    margin-top: 2rem;
     text-align: center;
+    background: linear-gradient(180deg, rgba(191, 161, 117, 0.03) 0%, transparent 100%);
+    border-radius: 12px;
+    padding-bottom: 2rem;
 }
 
 .certifications h3 {
-    font-size: 0.7rem;
+    font-size: 0.85rem;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     font-weight: 500;
 }
 
@@ -955,16 +955,29 @@ a {
 }
 
 .cert-item {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 0.6rem;
-    font-size: 0.85rem;
-    color: var(--text);
+    gap: 1rem;
+    font-size: 1.35rem;
+    color: #ffffff;
+    font-weight: 400;
+    padding: 1rem 2.5rem;
+    border: 1px solid rgba(191, 161, 117, 0.3);
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.cert-item:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(191, 161, 117, 0.15);
 }
 
 .cert-icon {
     color: var(--accent);
-    font-size: 0.6rem;
+    font-size: 1.2rem;
 }
 
 .contact {
@@ -1381,12 +1394,16 @@ a {
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 10px;
+    padding-left: 10px; /* Offset letter-spacing for true centering */
     color: #ffffff;
     font-weight: 400;
     margin: 0;
     white-space: nowrap;
 }
 .category-academic {
+    background: #000000;
+}
+.category-technical {
     background: #000000;
 }
 .category-professional {
@@ -1562,66 +1579,88 @@ a {
 }
 
 
-/* --- THEME 4: ARCHITECTURE (MULTI-PROJECT) --- */
-.architecture-theme {
-    background-color: #ffffff;
-    color: #1a1a1a;
-    display: block;
-}
-.architecture-header {
-    text-align: center;
-    margin-bottom: 60px;
-    max-width: 800px;
-    margin: 0 auto 60px;
-}
-.architecture-header .project-desc {
-    margin: 0 auto;
-}
-.architecture-theme .project-tag {
-    color: #7f8c8d;
-}
-.architecture-masonry {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+/* --- ARCHITECTURE SHOWCASE THEMES --- */
+/* Layout structure */
+.arch-split-container {
+    display: flex;
+    width: 100%;
     max-width: 1400px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
     margin: 0 auto;
 }
-.arch-card {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    background: #f9f9f9;
+.arch-split-container.reverse {
+    flex-direction: row-reverse;
+}
+.arch-split-content {
+    flex: 1;
+    padding: 40px;
+}
+.arch-split-visual {
+    flex: 1;
+    height: 70vh;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.arch-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-}
-.arch-img {
-    height: 250px;
+.arch-split-image {
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
-    background-color: #ddd; /* fallback */
-    transition: transform 0.5s ease;
 }
-.arch-card:hover .arch-img {
-    transform: scale(1.05);
+
+@media (max-width: 900px) {
+    .arch-split-container, .arch-split-container.reverse {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .arch-split-visual {
+        width: 100%;
+        height: 40vh;
+    }
+    .arch-split-content {
+        padding: 20px;
+    }
 }
-.arch-info {
-    padding: 25px;
-}
-.arch-info h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-.arch-info p {
-    font-size: 0.95rem;
-    color: #666;
-    margin: 0;
-}
+
+/* 1. GR FLORET, BEGUR (Deep Indigo & Golden Light) */
+.gr-floret-theme { background-color: #0a0b1a; color: #e6e6f0; }
+.gr-floret-theme .project-tag { color: #f5a623; }
+.gr-floret-theme .project-meta { color: rgba(230,230,240,0.7); }
+.gr-floret-theme .btn-primary { background-color: #f5a623; border-color: #f5a623; color: #000; }
+.gr-floret-theme .btn-primary:hover { background-color: #d48a1c; border-color: #d48a1c; color: #000; }
+
+/* 2. Weekend House (Rich Earth & Wood) */
+.weekend-house-theme { background-color: #120e0a; color: #f2ebd9; }
+.weekend-house-theme .project-tag { color: #b85a38; }
+.weekend-house-theme .project-meta { color: rgba(242,235,217,0.7); }
+.weekend-house-theme .btn-primary { background-color: #b85a38; border-color: #b85a38; color: #fff; }
+.weekend-house-theme .btn-primary:hover { background-color: #9e4a2d; border-color: #9e4a2d; color: #fff; }
+
+/* 3. Electrical Plans (High-Contrast Technical) */
+.electrical-plans-theme { background-color: #ffffff; color: #222222; }
+.electrical-plans-theme .project-tag { color: #ff00ff; }
+.electrical-plans-theme .project-title { color: #111111; }
+.electrical-plans-theme .project-meta { color: #666666; justify-content: center; }
+.electrical-plans-theme .project-desc { color: #444444; }
+.electrical-plans-theme .btn-primary { background-color: #ff00ff; border-color: #ff00ff; color: #fff; }
+.electrical-plans-theme .btn-primary:hover { background-color: #d600d6; border-color: #d600d6; color: #fff; }
+
+/* 4. KNS Infrastructure (Steel & Sky) */
+.kns-theme { background-color: #12161a; color: #e1e5e8; }
+.kns-theme .project-tag { color: #5b8db8; }
+.kns-theme .project-meta { color: rgba(225,229,232,0.7); }
+.kns-theme .btn-primary { background-color: #5b8db8; border-color: #5b8db8; color: #000; }
+.kns-theme .btn-primary:hover { background-color: #46769e; border-color: #46769e; color: #000; }
+
+/* 5. 5 BHK Residential Plan (Minimalist Monochrome) */
+.residential-5bhk-theme { background-color: #fafafa; color: #333333; }
+.residential-5bhk-theme .project-tag { color: #111111; }
+.residential-5bhk-theme .project-title { color: #111111; }
+.residential-5bhk-theme .project-meta { color: #666666; }
+.residential-5bhk-theme .btn-primary { background-color: #111111; border-color: #111111; color: #fff; }
+.residential-5bhk-theme .btn-primary:hover { background-color: #333333; border-color: #333333; color: #fff; }
 
 
 /* --- THEME 5: CO-WORKING SPACE (SUSTAINABLE 22-DEG) --- */
@@ -1658,20 +1697,13 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    perspective: 1000px;
 }
 .coworking-visual {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
     box-shadow: -20px 30px 50px rgba(0,0,0,0.5);
-    /* The 22 degree rotation concept */
-    transform: rotate(22deg) scale(0.9);
-    transition: transform 0.5s ease;
-}
-.coworking-visual:hover {
-    transform: rotate(0deg) scale(1);
 }
 
 /* Image assignments based on existing classes */
