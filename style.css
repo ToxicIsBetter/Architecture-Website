@@ -40,6 +40,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 body {
@@ -502,7 +503,7 @@ a {
 
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .section-tag {
@@ -532,7 +533,7 @@ a {
 }
 
 .about {
-    padding: 8rem 0;
+    padding: 2rem 0;
     background: var(--dark-secondary);
 }
 
@@ -692,21 +693,47 @@ a {
     min-width: 100%;
     padding: 0 0.5rem;
 }
+.portfolio {
+    padding-top: 3rem;
+}
+
+.portfolio .container {
+    max-width: 1400px;
+    padding: 0 2%;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    padding: 0 0 4rem;
+}
 
 .project-card {
-    display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    gap: 0;
     background: var(--dark-secondary);
-    border-radius: 4px;
+    border-radius: 8px;
     overflow: hidden;
+    text-decoration: none;
     box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 .project-image {
     position: relative;
-    min-height: 400px;
-    background: linear-gradient(135deg, var(--dark-tertiary) 0%, var(--dark) 100%);
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--dark-tertiary);
 }
 
 .project-overlay {
@@ -725,12 +752,61 @@ a {
 }
 
 .view-project {
-    font-size: 0.7rem;
-    letter-spacing: 3px;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
     text-transform: uppercase;
     color: #fff;
     padding: 0.8rem 1.5rem;
     border: 1px solid #fff;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    transition: var(--transition);
+}
+
+.view-project:hover {
+    background: #fff;
+    color: var(--dark);
+}
+
+.project-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-card .project-tag {
+    font-size: 0.7rem;
+    color: var(--accent);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.project-card .project-title {
+    font-size: 1.25rem;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.project-card .project-summary {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.project-card .project-meta {
+    margin-top: auto;
+    font-size: 0.75rem;
+    color: var(--gray);
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
 }
 
 .p1 {
@@ -882,7 +958,7 @@ a {
 }
 
 .expertise {
-    padding: 8rem 0;
+    padding: 2rem 0;
     background: var(--dark-secondary);
 }
 
@@ -981,7 +1057,7 @@ a {
 }
 
 .contact {
-    padding: 8rem 0;
+    padding: 2rem 0;
     background: var(--dark);
 }
 
@@ -1264,12 +1340,13 @@ a {
 }
 
 .awards {
-    padding: 6rem 0;
+    padding: 2rem 0;
 }
 
 .awards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
     gap: 2rem;
 }
 
@@ -1279,6 +1356,9 @@ a {
     border-radius: 8px;
     border: 1px solid var(--border);
     transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .award-card:hover {
@@ -1708,10 +1788,10 @@ a {
 
 /* Image assignments based on existing classes */
 .p1-image { background-image: url("https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781913021/cover_yktk8j.png"); }
-.p2-image { background-image: url("https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781913238/cover_vp5ig8.png"); }
+.p2-image { background-image: url("https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781913120/9_zwzwgx.png"); background-size: 150%; }
 .p3-image { background-image: url("https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912931/cover_x92ynd.png"); }
 .p5-image { background-image: url("https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781912861/cover_u9q0nj.png"); }
-.p4-1-image { background-image: url("https://res.cloudinary.com/dfduodbpa/image/upload/v1781912391/Untitled_design_27_of_62_xxksom.png"); }
+.p4-1-image { background-image: url("https://res.cloudinary.com/dfduodbpa/image/upload/v1781912390/cover_vetv06.png"); }
 .p4-2-image { background-image: url("https://res.cloudinary.com/dfduodbpa/image/upload/v1781912402/Untitled_design_44_of_62_he6y5y.png"); }
 .p4-3-image { background-image: url("https://res.cloudinary.com/dfduodbpa/image/upload/v1781912397/Untitled_design_37_of_62_zl5f0p.png"); }
 .p4-4-image { background-image: url("https://res.cloudinary.com/dfduodbpa/image/upload/v1781912399/Untitled_design_40_of_62_icepwu.png"); }
@@ -1719,6 +1799,9 @@ a {
 
 /* Mobile Adjustments */
 @media (max-width: 992px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
     .theatre-container, .tate-container, .coworking-container {
         flex-direction: column;
     }
@@ -1731,4 +1814,48 @@ a {
         width: 100%;
         height: 50vh;
     }
+}
+
+
+/* --- PRINT STYLES --- */
+@media print {
+    .fade-in {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    .project-section {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    
+    .category-divider {
+        page-break-after: avoid;
+        break-after: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    
+    .navbar {
+        position: absolute !important;
+    }
+    
+    body {
+        overflow: visible !important;
+    }
+}
+
+
+/* Logo Font override */
+.site-logo-text {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--text);
 }

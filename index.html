@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>Portfolio | Interior Designer</title>
-    <link rel="stylesheet" href="style.css?v=29">
+    <link rel="stylesheet" href="style.css?v=39">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 
 <body>
     <nav class="navbar">
         <div class="nav-logo">
-            <span class="site-logo-text" style="font-size: 1.8rem; font-weight: 700; letter-spacing: 1px; color: var(--text);">SM</span>
+            <span class="site-logo-text">SM</span>
         </div>
         <button class="theme-toggle" aria-label="Toggle theme">
             <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -41,34 +42,13 @@
             <span></span>
             <span></span>
         </div>
-        <ul class="nav-links">
+                <ul class="nav-links">
             <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#portfolio" class="nav-link">Selected Projects</a></li>
             <li><a href="#about" class="nav-link">About</a></li>
-            <li class="dropdown mega-dropdown">
-                <a href="#portfolio" class="nav-link">Portfolio</a>
-                <div class="mega-menu">
-                                        <div class="mega-column">
-                        <a href="index.html#professional-category" class="mega-header">Professional Projects</a>
-                        <a href="gr-floret.html" class="mega-link">GR FLORET, BEGUR</a>
-                        <a href="weekend-house.html" class="mega-link">Weekend House</a>
-                        <a href="kns-infrastructure.html" class="mega-link">KNS Infrastructure</a>
-                        <a href="5bhk-residential.html" class="mega-link">5 BHK Residential Plan</a>
-                    </div>
-                    <div class="mega-column">
-                        <a href="index.html#technical-category" class="mega-header">Technical Designs</a>
-                        <a href="electrical-plans.html" class="mega-link">Electrical Plans</a>
-                        <a href="interior-technical.html" class="mega-link">Interior Technical</a>
-                    </div>
-                    <div class="mega-column">
-                        <a href="index.html#academic-category" class="mega-header">Academic Designs</a>
-                        <a href="dialogues-in-theatre.html" class="mega-link">Dialogues In theatre</a>
-                        <a href="uel-term-2-work.html" class="mega-link">UEL Term-2 Work</a>
-                        <a href="coworking-space-design.html" class="mega-link">Co-working Space Design</a>
-                    </div>
-                </div>
-            </li>
             <li><a href="#expertise" class="nav-link">Expertise</a></li>
             <li><a href="#awards" class="nav-link">Awards</a></li>
+            <li><a href="Sanskruti_Mogali_CV.pdf" target="_blank" class="nav-link">CV</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
     </nav>
@@ -76,22 +56,19 @@
     <section id="home" class="hero">
         <div class="hero-bg">
             <div class="hero-video-container">
-                <iframe
-                    src="https://www.youtube.com/embed/ei8xkC7cKjE?autoplay=1&mute=1&controls=0&loop=1&playlist=ei8xkC7cKjE&modestbranding=1&playsinline=1"
-                    frameborder="0" allow="autoplay; fullscreen" allowfullscreen
-                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <img src="cover.png" alt="Hero Background" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
         </div>
         <div class="hero-content">
-            <p class="hero-tagline">Interior Designer & Architect</p>
+            <p class="hero-tagline">Architect & Interior Designer</p>
             <h1 class="hero-name">
                 <span class="name-line">SANSKRUTI MOGALI</span>
             </h1>
-            <p class="hero-description">Creating thoughtful spaces where form meets function, and every detail tells a
-                story of intentional design.</p>
-            <div class="hero-cta">
-                <a href="#academic-category" class="btn btn-primary">Academic Designs</a>
-                <a href="#professional-category" class="btn btn-secondary">Professional Projects</a>
+            <p class="hero-description">Designing thoughtful, people-centred spaces through interior, architectural, and spatial design.</p>
+            <div class="hero-cta" style="gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <a href="#portfolio" class="btn btn-primary">View Projects</a>
+                <a href="Sanskruti_Mogali_CV.pdf" target="_blank" class="btn btn-secondary">Download CV</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -101,7 +78,88 @@
         </div>
     </section>
 
-    <section id="about" class="about">
+    
+    
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Selected Projects</h2>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Tate Institute (Live Project) -->
+                <a href="uel-term-2-work.html" class="project-card fade-in">
+                    <div class="project-image p2-image">
+                        <div class="project-overlay">
+                            <span class="view-project">Explore Project</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Academic Design</span>
+                        <h3 class="project-title">Tate Institute (Live Project)</h3>
+                        <p class="project-summary">A live project redesigning the Tate Institute into a community-centric space featuring co-working areas, cafés, relaxation zones, and banquet halls.</p>
+                        <div class="project-meta">
+                            <span>2026</span> • <span>Interior Design</span> • <span>UK</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Dialogues in Theatre -->
+                <a href="dialogues-in-theatre.html" class="project-card fade-in">
+                    <div class="project-image p1-image">
+                        <div class="project-overlay">
+                            <span class="view-project">Explore Project</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Interior Design</span>
+                        <h3 class="project-title">Dialogues In theatre</h3>
+                        <p class="project-summary">A spatial proposal exploring performance and intimate audience experience.</p>
+                        <div class="project-meta">
+                            <span>2025</span> • <span>Interior Design</span> • <span>UK</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Co-working Space -->
+                <a href="coworking-space-design.html" class="project-card fade-in">
+                    <div class="project-image p5-image">
+                        <div class="project-overlay">
+                            <span class="view-project">Explore Project</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Architecture</span>
+                        <h3 class="project-title">Co-Working Space Design</h3>
+                        <p class="project-summary">A workplace concept balancing collaboration and architectural identity.</p>
+                        <div class="project-meta">
+                            <span>2022-2024</span> • <span>Architecture</span> • <span>India</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Professional Projects Consolidated -->
+                <a href="professional-projects.html" class="project-card fade-in">
+                    <div class="project-image p4-1-image">
+                        <div class="project-overlay">
+                            <span class="view-project">View 6 Projects</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Architecture & Technical</span>
+                        <h3 class="project-title">Professional Projects (India)</h3>
+                        <p class="project-summary">A collection of built architecture and technical design portfolios.</p>
+                        <div class="project-meta">
+                            <span>2022-2024</span> • <span>Various</span> • <span>India</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+<section id="about" class="about">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">About</span>
@@ -144,199 +202,8 @@
             </div>
         </div>
     </section>
-    <section id="portfolio" class="portfolio">
-        <!-- CATEGORY DIVIDER: PROFESSIONAL -->
-        <div id="professional-category" class="category-divider category-professional">
-            <div class="container divider-container">
-                <span class="divider-line"></span>
-                <h2 class="divider-title">Professional Projects</h2>
-                <span class="divider-line"></span>
-            </div>
-        </div>
-
-    <!-- PROJECT: GR FLORET, BEGUR -->
-    <section id="project-gr-floret" class="project-section gr-floret-theme fade-in">
-        <div class="arch-split-container">
-            <div class="arch-split-visual">
-                <div class="arch-split-image p4-1-image"></div>
-            </div>
-            <div class="arch-split-content">
-                <span class="project-tag">Architecture</span>
-                <h2 class="project-title">GR FLORET, BEGUR</h2>
-                <div class="project-meta">
-                    <span>2023</span> • <span>Residential</span> • <span>India</span>
-                </div>
-                <p class="project-desc">2 and 3 BHK Premium Apartments.</p>
-                <a href="gr-floret.html" class="btn btn-primary">Explore Project</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJECT: Weekend House -->
-    <section id="project-weekend-house" class="project-section weekend-house-theme fade-in">
-        <div class="arch-split-container">
-            <div class="arch-split-visual">
-                <div class="arch-split-image p4-2-image"></div>
-            </div>
-            <div class="arch-split-content">
-                <span class="project-tag">Architecture</span>
-                <h2 class="project-title">Weekend House</h2>
-                <div class="project-meta">
-                    <span>2024</span> • <span>Residential</span> • <span>India</span>
-                </div>
-                <p class="project-desc">Designed and executed for a client.</p>
-                <a href="weekend-house.html" class="btn btn-primary">Explore Project</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJECT: KNS Infrastructure -->
-    <section id="project-kns-infrastructure" class="project-section kns-theme fade-in">
-        <div class="arch-split-container">
-            <div class="arch-split-visual">
-                <div class="arch-split-image p4-4-image"></div>
-            </div>
-            <div class="arch-split-content">
-                <span class="project-tag">Architecture</span>
-                <h2 class="project-title">KNS Infrastructure</h2>
-                <div class="project-meta">
-                    <span>2024</span> • <span>Commercial</span> • <span>India</span>
-                </div>
-                <p class="project-desc">Facade Options in Bengaluru.</p>
-                <a href="kns-infrastructure.html" class="btn btn-primary">Explore Project</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJECT: 5 BHK Residential Plan -->
-    <section id="project-5bhk-residential" class="project-section residential-5bhk-theme fade-in">
-        <div class="arch-split-container">
-            <div class="arch-split-visual" style="box-shadow: none;">
-                <div class="arch-split-image p4-5-image"></div>
-            </div>
-            <div class="arch-split-content">
-                <span class="project-tag">Architecture</span>
-                <h2 class="project-title">5 BHK Residential Plan</h2>
-                <div class="project-meta">
-                    <span>2023</span> • <span>Residential</span> • <span>India</span>
-                </div>
-                <p class="project-desc">Comprehensive layout design.</p>
-                <a href="5bhk-residential.html" class="btn btn-primary">Explore Plan</a>
-            </div>
-        </div>
-    </section>
-
-        <!-- CATEGORY DIVIDER: TECHNICAL -->
-    <div id="technical-category" class="category-divider category-technical">
-        <div class="container divider-container">
-            <span class="divider-line"></span>
-            <h2 class="divider-title">Technical Designs</h2>
-            <span class="divider-line"></span>
-        </div>
-    </div>
-
-    <!-- PROJECT: Electrical Plans -->
-    <section id="project-electrical-plans" class="project-section electrical-plans-theme fade-in">
-        <div class="technical-container">
-            <div class="technical-header" style="margin-bottom: 30px;">
-                <span class="project-tag">Technical Design</span>
-                <h2 class="project-title">Electrical Plans</h2>
-                <div class="project-meta">
-                    <span>2023</span> • <span>Drafting</span> • <span>India</span>
-                </div>
-                <p class="project-desc">Residential Building Electrical Layouts.</p>
-                <a href="electrical-plans.html" class="btn btn-primary">Explore Drawings</a>
-            </div>
-            <div class="technical-blueprint p4-3-image" style="box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJECT 4: INTERIOR TECHNICAL -->
-    <section id="project-technical" class="project-section technical-theme fade-in">
-        <div class="technical-container">
-            <div class="technical-header">
-                <span class="project-tag">Design Details</span>
-                <h2 class="project-title">Interior Technical</h2>
-                <div class="project-meta">
-                    <span>2023</span> • <span>Architecture</span> • <span>India</span>
-                </div>
-                <p class="project-desc">Interior detailed drawings including electrical drawings, site plans, and technical drafting. Showcasing precision and structural understanding.</p>
-                <a href="interior-technical.html" class="btn btn-primary">Explore Drawings</a>
-            </div>
-            <div class="technical-blueprint p3-image">
-                <!-- Grid overlay for blueprint effect -->
-                <div class="blueprint-grid"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CATEGORY DIVIDER: ACADEMIC -->
-        <div id="academic-category" class="category-divider category-academic">
-            <div class="container divider-container">
-                <span class="divider-line"></span>
-                <h2 class="divider-title">Academic Designs</h2>
-                <span class="divider-line"></span>
-            </div>
-        </div>
-
-    <!-- PROJECT 1: UEL TERM-1 -->
-    <section id="project-theatre" class="project-section theatre-theme fade-in">
-        <div class="theatre-container">
-            <div class="theatre-content">
-                <span class="project-tag">Academic Designs</span>
-                <h2 class="project-title">Dialogues In theatre</h2>
-                <div class="project-meta">
-                    <span>2025</span> • <span>Interior Design</span> • <span>UK</span>
-                </div>
-                <p class="project-desc">Based around the theme of a theatre where two people are in a dialogue—independent from the world. There are certain rules to be followed. It shows balance where this object works only if two people use it; it will fail if used by only one person, exploring principles of power dynamics.</p>
-                <a href="dialogues-in-theatre.html" class="btn btn-primary">Explore Project</a>
-            </div>
-            <div class="theatre-visual">
-                <div class="theatre-image p1-image"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJECT 2: UEL TERM-2 -->
-    <section id="project-tate" class="project-section tate-theme fade-in">
-        <div class="tate-container">
-            <div class="tate-visual">
-                <div class="tate-image p2-image"></div>
-            </div>
-            <div class="tate-content">
-                <span class="project-tag">Academic Designs</span>
-                <h2 class="project-title">UEL Term-2 Work</h2>
-                <div class="project-meta">
-                    <span>2026</span> • <span>Interior Design</span> • <span>UK</span>
-                </div>
-                <p class="project-desc">A live project of Tate Institute redesigned as a community hub with co-working spaces. Furniture was designed to be used in 5 ways, emphasizing flexibility and making things work even when restrained in small, compact spaces and lacking time.</p>
-                <a href="uel-term-2-work.html" class="btn btn-primary">Explore Project</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJECT 3: CO-WORKING SPACE -->
-    <section id="project-coworking" class="project-section coworking-theme fade-in">
-        <div class="coworking-container">
-            <div class="coworking-content">
-                <span class="project-tag">Academic Designs</span>
-                <h2 class="project-title">Co-Working Space Design</h2>
-                <div class="project-meta">
-                    <span>2022-2024</span> • <span>Architecture</span> • <span>India</span>
-                </div>
-                <p class="project-desc">A complex structure where every floor rotates at a 22-degree angle for climatic response. Focused on sustainability, it features a greenhouse and furniture designed around body posture and anthropometry for ultimate comfort.</p>
-                <a href="coworking-space-design.html" class="btn btn-primary">Explore Project</a>
-            </div>
-            <div class="coworking-visual-wrapper">
-                <!-- Rotated visual element representing the 22 degree floor rotation -->
-                <div class="coworking-visual rotated-22 p5-image"></div>
-            </div>
-        </div>
-    </section>
-    </section>
-
-    <section id="expertise" class="expertise">
+    
+<section id="expertise" class="expertise">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Expertise</span>
@@ -512,7 +379,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-            <span class="site-logo-text" style="font-size: 1.8rem; font-weight: 700; letter-spacing: 1px; color: var(--text);">SM</span>
+            <span class="site-logo-text">SM</span>
         </div>
                 <p class="footer-tagline">Designing spaces that inspire.</p>
                 <div class="footer-links">

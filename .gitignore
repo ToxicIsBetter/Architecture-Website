@@ -1,5 +1,9 @@
-# Ignore backup media directory
-extra_2/
+.DS_Store
+node_modules/
+venv/
 .venv/
 __pycache__/
-fix_out.txt
+*.pdf
+*.log
+*.txt
+extra_2/
