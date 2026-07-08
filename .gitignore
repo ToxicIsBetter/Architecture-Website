@@ -3,7 +3,6 @@ node_modules/
 venv/
 .venv/
 __pycache__/
-*.pdf
 *.log
 *.txt
 extra_2/
