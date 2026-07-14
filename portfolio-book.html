@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Viewer | Sanskruti Mogali</title>
+    <link rel="stylesheet" href="portfolio-book.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+    <header class="book-header">
+        <a href="index.html" class="back-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back to Website
+        </a>
+        <div class="book-controls">
+            <span class="page-counter">Cover</span>
+        </div>
+    </header>
+
+    <main class="book-workspace">
+        <button class="nav-btn prev-btn" id="prev-btn" aria-label="Previous Page">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+
+        <div class="flip-book-container is-closed" id="book-container">
+            <!-- Layer 1: Static cardboard shell (always behind everything) -->
+            <div class="book-shell" id="book-shell">
+                <div class="shell-left"></div>
+                <div class="shell-right"></div>
+            </div>
+
+            <!-- Layer 2: Custom CSS 3D Hardcover (flips independently) -->
+            <div class="hardcover-front" id="hardcover-front">
+                <div class="hc-face hc-outside" id="cover-outside"></div>
+                <div class="hc-face hc-inside"></div>
+            </div>
+
+            <!-- Layer 3: Inner pages (St.PageFlip, inset inside shell) -->
+            <div class="inner-pages-frame" id="inner-pages-frame">
+                <div id="flip-book" class="flip-book">
+                    <!-- Pages injected by JS -->
+                </div>
+            </div>
+        </div>
+
+        <button class="nav-btn next-btn" id="next-btn" aria-label="Next Page">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+    </main>
+
+    <!-- Include StPageFlip library from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"
+        crossorigin="anonymous"></script>
+    <script src="portfolio-book.js"></script>
+</body>
+
+</html>

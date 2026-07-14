@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>Portfolio Viewer | Sanskruti Mogali</title>
+    <link rel="stylesheet" href="style.css?v=40">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow: hidden; /* Prevent body scroll, iframe handles it */
+        }
+        
+        .viewer-main {
+            position: relative;
+            flex: 1;
+            width: 100%;
+            height: calc(100vh - 80px);
+            margin-top: 80px;
+            background-color: var(--dark);
+            display: block;
+            padding: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .fp-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: none;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <nav class="navbar scrolled">
+        <div class="nav-logo">
+            <a href="index.html" style="text-decoration: none; color: inherit;"><span class="site-logo-text">SM</span></a>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle theme">
+            <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <circle cx="12" cy="12" r="5" />
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+            <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+        </button>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#home" class="nav-link">Home</a></li>
+            <li class="dropdown mega-dropdown">
+                <a href="index.html#portfolio" class="nav-link">Selected Projects</a>
+                <div class="mega-menu" style="min-width: 280px; padding: 1.5rem;">
+                    <div class="mega-column">
+                        <a href="uel-term-2-work.html" class="mega-link">Tate Institute (Live Project)</a>
+                        <a href="dialogues-in-theatre.html" class="mega-link">Dialogues In theatre</a>
+                        <a href="coworking-space-design.html" class="mega-link">Co-Working Space Design</a>
+                        <a href="professional-projects.html" class="mega-link">Professional Projects (India)</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="index.html#about" class="nav-link">About</a></li>
+            <li><a href="index.html#expertise" class="nav-link">Expertise</a></li>
+            <li><a href="index.html#awards" class="nav-link">Awards</a></li>
+            <li><a href="./Sanskruti_Mogali_CV.pdf" target="_blank" class="nav-link">CV</a></li>
+            <li><a href="portfolio-viewer.html" class="nav-link">PORTFOLIO</a></li>
+            <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="viewer-main">
+        <iframe allowfullscreen="allowfullscreen" allow="autoplay; fullscreen; clipboard-write" scrolling="no" class="fp-iframe" src="https://heyzine.com/flip-book/132b0e8d3d.html"></iframe>
+    </main>
+
+    <script>
+        // Apply saved theme immediately
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const themeToggle = document.querySelector('.theme-toggle');
+
+            // Theme toggling
+            themeToggle.addEventListener('click', () => {
+                const current = document.documentElement.getAttribute('data-theme');
+                const next = current === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+            });
+
+            // Mobile nav toggle
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
