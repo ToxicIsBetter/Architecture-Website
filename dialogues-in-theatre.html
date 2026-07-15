@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UEL Term-1 Work | Portfolio</title>
+    <title>Dialogues in Theatre | Portfolio</title>
     <link rel="stylesheet" href="style.css?v=18">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
@@ -42,7 +42,7 @@
         }
 
         .project-header h1 {
-            font-family: 'Cormorant Garamond', serif;
+            /* font-family removed to match site default */
             font-size: 3rem;
             color: var(--text);
             margin-bottom: 10px;
@@ -85,7 +85,7 @@
         }
 
         .project-cover h1 {
-            font-family: 'Cormorant Garamond', serif;
+            /* font-family removed to match site default */
             font-size: 5rem;
             color: #ffffff;
             margin: 0;
@@ -131,7 +131,7 @@
                 <a href="index.html#portfolio" class="nav-link">Selected Projects</a>
                 <div class="mega-menu" style="min-width: 280px; padding: 1.5rem;">
                     <div class="mega-column">
-                        <a href="uel-term-2-work.html" class="mega-link">Tate Institute (Live Project)</a>
+                        <a href="uel-term-2-work.html" class="mega-link">Tate Institute</a>
                         <a href="dialogues-in-theatre.html" class="mega-link">Dialogues In theatre</a>
                         <a href="coworking-space-design.html" class="mega-link">Co-Working Space Design</a>
                         <a href="professional-projects.html" class="mega-link">Professional Projects (India)</a>
@@ -141,7 +141,7 @@
             <li><a href="index.html#about" class="nav-link">About</a></li>
             <li><a href="index.html#expertise" class="nav-link">Expertise</a></li>
             <li><a href="index.html#awards" class="nav-link">Awards</a></li>
-            <li><a href="./Sanskruti_Mogali_CV.pdf" target="_blank" class="nav-link">CV</a></li>
+            <li><a href="./Sanskruti_Mogali_CV-2.pdf" target="_blank" class="nav-link">CV</a></li>
             <li><a href="./portfolio.pdf" target="_blank" class="nav-link">PORTFOLIO</a></li>
             <li><a href="index.html#contact" class="nav-link">Contact</a></li>
         </ul>
@@ -152,7 +152,7 @@
         <img src="https://res.cloudinary.com/dfduodbpa/image/upload/f_auto,q_auto/v1781913021/cover_yktk8j.png"
             alt="Cover Image" loading="lazy">
         <div class="project-cover-overlay">
-            <h1>UEL Term-1 Work</h1>
+            <h1>Dialogues in Theatre</h1>
         </div>
     </div>
     <section class="project-detail" style="padding-top: 40px;">
@@ -213,6 +213,39 @@
             const navToggle = document.querySelector('.nav-toggle');
             const navLinks = document.querySelector('.nav-links');
             const themeToggle = document.querySelector('.theme-toggle');
+
+            if (themeToggle) {
+                themeToggle.addEventListener("click", () => {
+                    const current = document.documentElement.getAttribute("data-theme");
+                    const next = current === "dark" ? "light" : "dark";
+                    document.documentElement.setAttribute("data-theme", next);
+                    localStorage.setItem("theme", next);
+                });
+            }
+
+            let lastScroll = 0;
+            window.addEventListener("scroll", () => {
+                if (navbar) {
+                    const currentScroll = window.scrollY;
+                    navbar.classList.toggle("scrolled", currentScroll > 80);
+                    lastScroll = currentScroll;
+                }
+            });
+
+            if (navToggle && navLinks) {
+                navToggle.addEventListener("click", () => {
+                    navToggle.classList.toggle("active");
+                    navLinks.classList.toggle("active");
+                });
+                
+                document.querySelectorAll(".nav-link, .mega-link").forEach(link => {
+                    link.addEventListener("click", () => {
+                        navToggle.classList.remove("active");
+                        navLinks.classList.remove("active");
+                    });
+                });
+            }
+
             
             // No carousel on this page
             
@@ -233,7 +266,7 @@
             document.querySelectorAll('.skill-fill').forEach(el => fadeObserver.observe(el));
 
             const contactForm = document.getElementById('contactForm');
-            contactForm.addEventListener('submit', (e) => {
+            if (contactForm) { contactForm.addEventListener('submit', (e) => {
                 e.preventDefault();
                 const btn = contactForm.querySelector('.btn-submit');
                 btn.classList.add('success');
@@ -248,6 +281,7 @@
                     contactForm.reset();
                 }, 3000);
             });
+            }
 
             document.querySelectorAll('.form-group input, .form-group textarea, .form-group select').forEach(input => {
                 const handleFocus = () => input.parentElement.classList.toggle('focus', true);

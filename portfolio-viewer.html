@@ -41,6 +41,17 @@
             height: 100%;
             display: block;
         }
+        /* Cover the Heyzine watermark dynamically based on screen size */
+        .watermark-cover {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: clamp(160px, 18vw, 250px);
+            height: clamp(75px, 12vh, 120px);
+            background: #e3e3e3; /* Solid color matching the bottom left of the SVG gradient */
+            z-index: 5;
+            pointer-events: none; /* Let clicks pass through if needed */
+        }
         
     </style>
 </head>
@@ -79,7 +90,7 @@
                 <a href="index.html#portfolio" class="nav-link">Selected Projects</a>
                 <div class="mega-menu" style="min-width: 280px; padding: 1.5rem;">
                     <div class="mega-column">
-                        <a href="uel-term-2-work.html" class="mega-link">Tate Institute (Live Project)</a>
+                        <a href="uel-term-2-work.html" class="mega-link">Tate Institute</a>
                         <a href="dialogues-in-theatre.html" class="mega-link">Dialogues In theatre</a>
                         <a href="coworking-space-design.html" class="mega-link">Co-Working Space Design</a>
                         <a href="professional-projects.html" class="mega-link">Professional Projects (India)</a>
@@ -89,7 +100,7 @@
             <li><a href="index.html#about" class="nav-link">About</a></li>
             <li><a href="index.html#expertise" class="nav-link">Expertise</a></li>
             <li><a href="index.html#awards" class="nav-link">Awards</a></li>
-            <li><a href="./Sanskruti_Mogali_CV.pdf" target="_blank" class="nav-link">CV</a></li>
+            <li><a href="./Sanskruti_Mogali_CV-2.pdf" target="_blank" class="nav-link">CV</a></li>
             <li><a href="portfolio-viewer.html" class="nav-link">PORTFOLIO</a></li>
             <li><a href="index.html#contact" class="nav-link">Contact</a></li>
         </ul>
@@ -97,6 +108,7 @@
 
     <main class="viewer-main">
         <iframe allowfullscreen="allowfullscreen" allow="autoplay; fullscreen; clipboard-write" scrolling="no" class="fp-iframe" src="https://heyzine.com/flip-book/132b0e8d3d.html"></iframe>
+        <div class="watermark-cover"></div>
     </main>
 
     <script>

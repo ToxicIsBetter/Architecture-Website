@@ -19,8 +19,8 @@
 [data-theme="light"] {
     --primary: #1a1a1a;
     --primary-rgb: 245, 245, 243;
-    --accent: #6f593b;
-    --accent-light: #8e734e;
+    --accent: #9a764d; /* Warmer, less muddy gold/brown */
+    --accent-light: #b38f64;
     --dark: #f5f5f3;
     --dark-secondary: #ffffff;
     --dark-tertiary: #ebebeb;
@@ -424,7 +424,7 @@ a {
 
 .btn-primary {
     background: var(--accent);
-    color: var(--primary);
+    color: var(--dark);
 }
 
 .btn-primary:hover {
@@ -433,7 +433,7 @@ a {
 }
 
 .btn-secondary {
-    background: transparent;
+    background: var(--dark-secondary);
     color: var(--text);
     border: 1px solid var(--border);
 }
